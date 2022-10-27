@@ -1,33 +1,33 @@
 package entidades;
 
 public class BlackBoardObject {
-    private int peticion;
+    private String peticion;
     private Usuario usuario;
     private Publicacion publicacion;
     private Comentario comentario;
     private Notificacion notificacion;
 
-    public BlackBoardObject(int peticion, Usuario usuario) {
+    public BlackBoardObject(String peticion, Usuario usuario) {
         this.peticion = peticion;
         this.usuario = usuario;
     }
 
-    public BlackBoardObject(int peticion, Publicacion publicacion) {
+    public BlackBoardObject(String peticion, Publicacion publicacion) {
         this.peticion = peticion;
         this.publicacion = publicacion;
     }
 
-    public BlackBoardObject(int peticion, Comentario comentario) {
+    public BlackBoardObject(String peticion, Comentario comentario) {
         this.peticion = peticion;
         this.comentario = comentario;
     }
 
-    public BlackBoardObject(int peticion, Notificacion notificacion) {
+    public BlackBoardObject(String peticion, Notificacion notificacion) {
         this.peticion = peticion;
         this.notificacion = notificacion;
     }
 
-    public int getPeticion() {
+    public String getPeticion() {
         return peticion;
     }
 
