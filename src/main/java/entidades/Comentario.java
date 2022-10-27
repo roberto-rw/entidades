@@ -17,9 +17,12 @@ public class Comentario {
     @Column( name = "fecha")
     private Calendar fecha;
 
-    @OneToOne( cascade = CascadeType.ALL)
-    @JoinColumn( name = "id_contenido")
-    private Contenido contenido;
+    @Column( name = "texto")
+    private String texto;
+
+    @Lob
+    @Column( name = "imagen")
+    private byte[] imagen;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario")
@@ -30,11 +33,8 @@ public class Comentario {
 
     public Comentario(){}
 
-    public Comentario(Calendar fecha, Contenido contenido, Usuario usuario, Publicacion publicacion) {
-        this.fecha = fecha;
-        this.contenido = contenido;
-        this.usuario = usuario;
-        this.publicacion = publicacion;
+    public Long getId() {
+        return id;
     }
 
     public Calendar getFecha() {
@@ -45,12 +45,20 @@ public class Comentario {
         this.fecha = fecha;
     }
 
-    public Contenido getContenido() {
-        return contenido;
+    public String getTexto() {
+        return texto;
     }
 
-    public void setContenido(Contenido contenido) {
-        this.contenido = contenido;
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public byte[] getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
     }
 
     public Usuario getUsuario() {
@@ -67,10 +75,6 @@ public class Comentario {
 
     public void setPublicacion(Publicacion publicacion) {
         this.publicacion = publicacion;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     @Override

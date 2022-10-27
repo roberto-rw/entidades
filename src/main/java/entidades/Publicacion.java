@@ -23,9 +23,12 @@ public class Publicacion {
     @Column( name = "fecha")
     private Calendar fecha;
 
-    @OneToOne( cascade = CascadeType.ALL)
-    @JoinColumn( name = "id_contenido")
-    private Contenido contenido;
+    @Column( name = "texto")
+    private String texto;
+
+    @Lob
+    @Column( name = "imagen")
+    private byte[] imagen;
 
     @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
     private List<Comentario> comentarios;
@@ -38,23 +41,28 @@ public class Publicacion {
 
     public Publicacion() {}
 
-    public Publicacion(Usuario usuario, Calendar fecha, Contenido contenido) {
+    public Publicacion(Usuario usuario, Calendar fecha, String texto, byte[] imagen) {
         this.usuario = usuario;
         this.fecha = fecha;
-        this.contenido = contenido;
+        this.texto = texto;
+        this.imagen = imagen;
     }
 
-    public Publicacion(Usuario usuario, Calendar fecha, Contenido contenido, List<Etiqueta> etiquetas) {
+    public Publicacion(Usuario usuario, Calendar fecha, String texto) {
         this.usuario = usuario;
         this.fecha = fecha;
-        this.contenido = contenido;
-        this.etiquetas = etiquetas;
+        this.texto = texto;
     }
 
-    public Publicacion(Usuario usuario) {
+    public Publicacion(Usuario usuario, Calendar fecha, byte[] imagen) {
         this.usuario = usuario;
+        this.fecha = fecha;
+        this.imagen = imagen;
     }
 
+    public Long getId() {
+        return id;
+    }
 
     public Usuario getUsuario() {
         return usuario;
@@ -72,12 +80,20 @@ public class Publicacion {
         this.fecha = fecha;
     }
 
-    public Contenido getContenido() {
-        return contenido;
+    public String getTexto() {
+        return texto;
     }
 
-    public void setContenido(Contenido contenido) {
-        this.contenido = contenido;
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public byte[] getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
     }
 
     public List<Comentario> getComentarios() {
@@ -94,10 +110,6 @@ public class Publicacion {
 
     public void setEtiquetas(List<Etiqueta> etiquetas) {
         this.etiquetas = etiquetas;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public List<HashtagPublicacion> getHashtagPublicaciones() {
