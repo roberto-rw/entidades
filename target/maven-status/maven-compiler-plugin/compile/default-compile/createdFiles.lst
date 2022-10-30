@@ -1,0 +1,11 @@
+entidades\Sexo.class
+entidades\HashtagPublicacion.class
+entidades\Publicacion.class
+entidades\BlackBoardObject.class
+entidades\Comentario.class
+entidades\Etiqueta.class
+helpers\Peticiones.class
+pruebas\pruebas.class
+entidades\Notificacion.class
+entidades\Usuario.class
+entidades\Hashtag.class

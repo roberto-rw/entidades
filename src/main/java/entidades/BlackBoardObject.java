@@ -7,6 +7,17 @@ public class BlackBoardObject {
     private Comentario comentario;
     private Notificacion notificacion;
 
+    public BlackBoardObject() {
+    }
+
+    public BlackBoardObject(String peticion, Usuario usuario, Publicacion publicacion, Comentario comentario, Notificacion notificacion) {
+        this.peticion = peticion;
+        this.usuario = usuario;
+        this.publicacion = publicacion;
+        this.comentario = comentario;
+        this.notificacion = notificacion;
+    }
+    
     public BlackBoardObject(String peticion, Usuario usuario) {
         this.peticion = peticion;
         this.usuario = usuario;
@@ -46,4 +57,11 @@ public class BlackBoardObject {
     public Notificacion getNotificacion() {
         return notificacion;
     }
+
+    @Override
+    public String toString() {
+        return "BlackBoardObject{" + "peticion=" + peticion + ", usuario=" + usuario + ", publicacion=" + publicacion + ", comentario=" + comentario + ", notificacion=" + notificacion + '}';
+    }
+    
+    
 }
