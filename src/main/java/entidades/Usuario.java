@@ -32,6 +32,7 @@ public class Usuario {
     private Calendar fechaNacimiento;
 
     @Column( name = "sexo")
+    @Enumerated (EnumType.STRING)
     private Sexo sexo;
 
     @Lob
