@@ -1,7 +1,6 @@
 package helpers;
 
 public class Peticiones {
-    /// 101 -> 1 = Usuario, 0 = no se, 1 = Agregar
     public static String REGISTRAR_USUARIO = "100";
     public static String INICIAR_SESION = "101";
     public static String ACTUALIZAR_USUARIO = "102";
@@ -10,7 +9,6 @@ public class Peticiones {
     public static String REGISTRAR_PUBLICACION = "200";
     public static String ACTUALIZAR_PUBLICACION= "201";
     public static String ELIMINAR_PUBLICACION = "202";
-
     public static String CONSULTAR_PUBLICACIONES = "203";
     public static String CONSULTAR_PUBLICACIONES_HASHTAG = "204";
 
