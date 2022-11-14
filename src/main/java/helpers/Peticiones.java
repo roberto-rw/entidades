@@ -19,6 +19,9 @@ public class Peticiones {
     public static String REGISTRAR_NOTIFICACION = "400";
     public static String ELIMINAR_NOTIFICACION = "401";
 
-    public static String LOGGEAR = "500";
+    public static String LOGGEAR_INFO = "500";
+    public static String LOGGEAR_ERROR = "501";
+    public static String LOGGEAR_ADVERTENCIA = "502";
+    
     public static String NOTIFICAR_TODOS = "600";
 }
