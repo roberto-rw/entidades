@@ -16,7 +16,7 @@ public class Pruebas2 {
 
     public static void main(String[] args) throws JsonProcessingException {
         Usuario usuario = new Usuario("kura", "1234", "asd@gmail.com", "2131231", Calendar.getInstance(), Sexo.HOMBRE, null);
-        AbstractPeticion peticion = new PeticionUsuario(Peticiones.REGISTRAR_USUARIO, usuario);
+        AbstractPeticion peticion = new PeticionUsuario(Peticiones.REGISTRAR_USUARIO, null, usuario);
         ObjectMapper om = new ObjectMapper();
         String json = om.writeValueAsString(peticion);
         System.out.println(json);
@@ -24,7 +24,7 @@ public class Pruebas2 {
 
         if (peticion instanceof PeticionPublicacion) {
             AbstractPeticion peticion2 = om.readValue(json, PeticionPublicacion.class);
-            System.out.println(peticion2);
+            System.out.println(peticion2.toString());
         }else if (peticion instanceof PeticionComentario) {
             AbstractPeticion peticion2 = om.readValue(json, PeticionComentario.class);
             System.out.println(peticion2);

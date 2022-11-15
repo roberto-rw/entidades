@@ -14,7 +14,7 @@ import peticiones.PeticionUsuario;
 
 public class ConvertirPeticion {
 
-    public static AbstractPeticion PetitionConverter(String json) {
+    public static AbstractPeticion PetitionConverter(String json, Integer hashcodeSC) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(json);
@@ -31,6 +31,7 @@ public class ConvertirPeticion {
                 peticion = objectMapper.readValue(json, PeticionNotificacion.class);
             }
             
+            peticion.setHashcodeSC(hashcodeSC);
             //System.out.println(peticion);
             return peticion;
         } catch (Exception e) {

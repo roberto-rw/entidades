@@ -5,6 +5,7 @@ public class Peticiones {
     public static String INICIAR_SESION = "101";
     public static String ACTUALIZAR_USUARIO = "102";
     public static String ELIMINAR_USUARIO = "103";
+    public static String CONSULTAR_USUARIO = "104";
 
     public static String REGISTRAR_PUBLICACION = "200";
     public static String ACTUALIZAR_PUBLICACION= "201";
@@ -24,4 +25,5 @@ public class Peticiones {
     public static String LOGGEAR_ADVERTENCIA = "502";
     
     public static String NOTIFICAR_TODOS = "600";
+    public static String NOTIFICAR_CLIENTE = "601";
 }

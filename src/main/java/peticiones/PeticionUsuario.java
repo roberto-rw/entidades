@@ -8,11 +8,18 @@ public class PeticionUsuario extends AbstractPeticion {
 
     public PeticionUsuario() {
     }
-    
-    public PeticionUsuario(String peticion, Usuario usuario) {
+
+    public PeticionUsuario( String peticion, Integer hashcodeSC, Usuario usuario) {
+        super(peticion, hashcodeSC);
+        this.usuario = usuario;
+    }
+
+    public PeticionUsuario( String peticion, Usuario usuario) {
         super(peticion);
         this.usuario = usuario;
     }
+    
+    
 
     public Usuario getUsuario() {
         return usuario;
