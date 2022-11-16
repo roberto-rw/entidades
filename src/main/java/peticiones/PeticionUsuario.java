@@ -9,17 +9,25 @@ public class PeticionUsuario extends AbstractPeticion {
     public PeticionUsuario() {
     }
 
-    public PeticionUsuario( String peticion, Integer hashcodeSC, Usuario usuario) {
+    public PeticionUsuario(String peticion, String peticionRespuesta, Integer hashcodeSC, String respuesta, Usuario usuario) {
+        super(peticion, peticionRespuesta, hashcodeSC, respuesta);
+        this.usuario = usuario;
+    }
+
+    public PeticionUsuario(String peticion, Integer hashcodeSC, String respuesta, Usuario usuario) {
+        super(peticion, hashcodeSC, respuesta);
+        this.usuario = usuario;
+    }
+
+    public PeticionUsuario(String peticion, Integer hashcodeSC, Usuario usuario) {
         super(peticion, hashcodeSC);
         this.usuario = usuario;
     }
 
-    public PeticionUsuario( String peticion, Usuario usuario) {
+    public PeticionUsuario(String peticion, Usuario usuario) {
         super(peticion);
         this.usuario = usuario;
     }
-    
-    
 
     public Usuario getUsuario() {
         return usuario;
@@ -31,12 +39,8 @@ public class PeticionUsuario extends AbstractPeticion {
 
     @Override
     public String toString() {
-        
-        return super.toString()+"PeticionUsuario{" + "usuario=" + usuario + '}';
+
+        return super.toString() + "PeticionUsuario{" + "usuario=" + usuario + '}';
     }
 
-    
-    
-    
-    
 }

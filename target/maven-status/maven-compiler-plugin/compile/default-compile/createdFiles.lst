@@ -3,7 +3,9 @@ entidades\HashtagPublicacion.class
 peticiones\PeticionNotificacion.class
 peticiones\PeticionPublicacion.class
 pruebas\pruebas.class
+peticiones\PeticionPublicaciones.class
 helpers\ConvertirPeticion.class
+peticiones\PeticionLog.class
 pruebas\Pruebas2.class
 peticiones\PeticionComentario.class
 entidades\Publicacion.class

@@ -39,14 +39,14 @@ public class Usuario {
     @Column( name = "imagen_perfil")
     private byte[] imagenPerfil;
 
-    @OneToMany( mappedBy = "usuario", cascade = CascadeType.ALL)
-    private List<Publicacion> publicaciones;
-
-    @OneToMany( mappedBy = "etiquetado", cascade = CascadeType.ALL)
-    private List<Etiqueta> etiquetas;
-
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private List<Comentario> comentarios;
+//    @OneToMany( mappedBy = "idUsuario", cascade = CascadeType.ALL)
+//    private List<Publicacion> publicaciones;
+//
+//    @OneToMany( mappedBy = "etiquetado", cascade = CascadeType.ALL)
+//    private List<Etiqueta> etiquetas;
+//
+//    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+//    private List<Comentario> comentarios;
 
     public Usuario(){}
 
@@ -63,6 +63,13 @@ public class Usuario {
     public Usuario(String usuario){
         this.usuario = usuario;
     }
+
+    public Usuario(String usuario, String password) {
+        this.usuario = usuario;
+        this.password = password;
+    }
+    
+    
 
     public String getUsuario() {
         return usuario;
@@ -120,33 +127,33 @@ public class Usuario {
         this.imagenPerfil = imagenPerfil;
     }
 
-    public List<Publicacion> getPublicaciones() {
-        return publicaciones;
-    }
-
-    public void setPublicaciones(List<Publicacion> publicaciones) {
-        this.publicaciones = publicaciones;
-    }
+//    public List<Publicacion> getPublicaciones() {
+//        return publicaciones;
+//    }
+//
+//    public void setPublicaciones(List<Publicacion> publicaciones) {
+//        this.publicaciones = publicaciones;
+//    }
 
     public Long getId() {
         return id;
     }
 
-    public List<Etiqueta> getEtiquetas() {
-        return etiquetas;
-    }
-
-    public List<Comentario> getComentarios() {
-        return comentarios;
-    }
-
-    public void setEtiquetas(List<Etiqueta> etiquetas) {
-        this.etiquetas = etiquetas;
-    }
-
-    public void setComentarios(List<Comentario> comentarios) {
-        this.comentarios = comentarios;
-    }
+//    public List<Etiqueta> getEtiquetas() {
+//        return etiquetas;
+//    }
+//
+//    public List<Comentario> getComentarios() {
+//        return comentarios;
+//    }
+//
+//    public void setEtiquetas(List<Etiqueta> etiquetas) {
+//        this.etiquetas = etiquetas;
+//    }
+//
+//    public void setComentarios(List<Comentario> comentarios) {
+//        this.comentarios = comentarios;
+//    }
 
     @Override
     public boolean equals(Object o) {

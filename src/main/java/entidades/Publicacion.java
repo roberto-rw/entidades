@@ -16,9 +16,10 @@ public class Publicacion {
     @Column( name = "id_publicacion")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn( name = "usuario_id")
-    private Usuario usuario;
+    //@ManyToOne
+    //@JoinColumn( name = "id_usuario")
+    @Column( name = "id_usuario")
+    private Long idUsuario;
 
     @Column( name = "fecha")
     private Calendar fecha;
@@ -30,32 +31,32 @@ public class Publicacion {
     @Column( name = "imagen")
     private byte[] imagen;
 
-    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
-    private List<Comentario> comentarios;
-
-    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
-    private List<Etiqueta> etiquetas;
-
-    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.ALL)
-    private List<HashtagPublicacion> hashtagPublicaciones;
+//    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
+//    private List<Comentario> comentarios;
+//
+//    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
+//    private List<Etiqueta> etiquetas;
+//
+//    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.ALL)
+//    private List<HashtagPublicacion> hashtagPublicaciones;
 
     public Publicacion() {}
 
-    public Publicacion(Usuario usuario, Calendar fecha, String texto, byte[] imagen) {
-        this.usuario = usuario;
+    public Publicacion(Long usuario, Calendar fecha, String texto, byte[] imagen) {
+        this.idUsuario = usuario;
         this.fecha = fecha;
         this.texto = texto;
         this.imagen = imagen;
     }
 
-    public Publicacion(Usuario usuario, Calendar fecha, String texto) {
-        this.usuario = usuario;
+    public Publicacion(Long usuario, Calendar fecha, String texto) {
+        this.idUsuario = usuario;
         this.fecha = fecha;
         this.texto = texto;
     }
 
-    public Publicacion(Usuario usuario, Calendar fecha, byte[] imagen) {
-        this.usuario = usuario;
+    public Publicacion(Long usuario, Calendar fecha, byte[] imagen) {
+        this.idUsuario = usuario;
         this.fecha = fecha;
         this.imagen = imagen;
     }
@@ -64,12 +65,12 @@ public class Publicacion {
         return id;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public Long getUsuario() {
+        return idUsuario;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setUsuario(Long usuario) {
+        this.idUsuario = usuario;
     }
 
     public Calendar getFecha() {
@@ -96,29 +97,29 @@ public class Publicacion {
         this.imagen = imagen;
     }
 
-    public List<Comentario> getComentarios() {
-        return comentarios;
-    }
-
-    public void setComentarios(List<Comentario> comentarios) {
-        this.comentarios = comentarios;
-    }
-
-    public List<Etiqueta> getEtiquetas() {
-        return etiquetas;
-    }
-
-    public void setEtiquetas(List<Etiqueta> etiquetas) {
-        this.etiquetas = etiquetas;
-    }
-
-    public List<HashtagPublicacion> getHashtagPublicaciones() {
-        return hashtagPublicaciones;
-    }
-
-    public void setHashtagPublicaciones(List<HashtagPublicacion> hashtagPublicaciones) {
-        this.hashtagPublicaciones = hashtagPublicaciones;
-    }
+//    public List<Comentario> getComentarios() {
+//        return comentarios;
+//    }
+//
+//    public void setComentarios(List<Comentario> comentarios) {
+//        this.comentarios = comentarios;
+//    }
+//
+//    public List<Etiqueta> getEtiquetas() {
+//        return etiquetas;
+//    }
+//
+//    public void setEtiquetas(List<Etiqueta> etiquetas) {
+//        this.etiquetas = etiquetas;
+//    }
+//
+//    public List<HashtagPublicacion> getHashtagPublicaciones() {
+//        return hashtagPublicaciones;
+//    }
+//
+//    public void setHashtagPublicaciones(List<HashtagPublicacion> hashtagPublicaciones) {
+//        this.hashtagPublicaciones = hashtagPublicaciones;
+//    }
 
     @Override
     public boolean equals(Object o) {

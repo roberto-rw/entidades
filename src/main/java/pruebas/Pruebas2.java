@@ -2,6 +2,7 @@ package pruebas;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import entidades.Publicacion;
 import entidades.Sexo;
 import entidades.Usuario;
 import helpers.Peticiones;
@@ -16,7 +17,8 @@ public class Pruebas2 {
 
     public static void main(String[] args) throws JsonProcessingException {
         Usuario usuario = new Usuario("kura", "1234", "asd@gmail.com", "2131231", Calendar.getInstance(), Sexo.HOMBRE, null);
-        AbstractPeticion peticion = new PeticionUsuario(Peticiones.REGISTRAR_USUARIO, null, usuario);
+        Publicacion publicacion = new Publicacion(39L, Calendar.getInstance(), "asdasdasdasd");
+        AbstractPeticion peticion = new PeticionPublicacion(Peticiones.REGISTRAR_PUBLICACION, publicacion);
         ObjectMapper om = new ObjectMapper();
         String json = om.writeValueAsString(peticion);
         System.out.println(json);
