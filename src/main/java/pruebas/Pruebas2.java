@@ -17,7 +17,7 @@ public class Pruebas2 {
 
     public static void main(String[] args) throws JsonProcessingException {
         Usuario usuario = new Usuario("kura", "1234", "asd@gmail.com", "2131231", Calendar.getInstance(), Sexo.HOMBRE, null);
-        Publicacion publicacion = new Publicacion(39L, Calendar.getInstance(), "asdasdasdasd");
+        Publicacion publicacion = new Publicacion(null, Calendar.getInstance(), "asdasdasdasd");
         AbstractPeticion peticion = new PeticionPublicacion(Peticiones.REGISTRAR_PUBLICACION, publicacion);
         ObjectMapper om = new ObjectMapper();
         String json = om.writeValueAsString(peticion);

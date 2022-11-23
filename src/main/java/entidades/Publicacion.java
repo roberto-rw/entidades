@@ -1,12 +1,18 @@
 package entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Objects;
 
 import jakarta.persistence.*;
 
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "publicaciones")
 public class Publicacion {
@@ -16,10 +22,9 @@ public class Publicacion {
     @Column( name = "id_publicacion")
     private Long id;
 
-    //@ManyToOne
-    //@JoinColumn( name = "id_usuario")
-    @Column( name = "id_usuario")
-    private Long idUsuario;
+    @ManyToOne
+    @JoinColumn( name = "id_usuario")
+    private Usuario usuario;
 
     @Column( name = "fecha")
     private Calendar fecha;
@@ -28,7 +33,7 @@ public class Publicacion {
     private String texto;
 
     @Lob
-    @Column( name = "imagen")
+    @Column( name = "imagen", length=1000000)
     private byte[] imagen;
 
 //    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
@@ -42,21 +47,21 @@ public class Publicacion {
 
     public Publicacion() {}
 
-    public Publicacion(Long usuario, Calendar fecha, String texto, byte[] imagen) {
-        this.idUsuario = usuario;
+    public Publicacion(Usuario usuario, Calendar fecha, String texto, byte[] imagen) {
+        this.usuario = usuario;
         this.fecha = fecha;
         this.texto = texto;
         this.imagen = imagen;
     }
 
-    public Publicacion(Long usuario, Calendar fecha, String texto) {
-        this.idUsuario = usuario;
+    public Publicacion(Usuario usuario, Calendar fecha, String texto) {
+        this.usuario = usuario;
         this.fecha = fecha;
         this.texto = texto;
     }
 
-    public Publicacion(Long usuario, Calendar fecha, byte[] imagen) {
-        this.idUsuario = usuario;
+    public Publicacion(Usuario usuario, Calendar fecha, byte[] imagen) {
+        this.usuario = usuario;
         this.fecha = fecha;
         this.imagen = imagen;
     }
@@ -65,12 +70,12 @@ public class Publicacion {
         return id;
     }
 
-    public Long getUsuario() {
-        return idUsuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUsuario(Long usuario) {
-        this.idUsuario = usuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public Calendar getFecha() {

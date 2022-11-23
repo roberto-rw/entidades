@@ -2,6 +2,7 @@
 
 package entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.Calendar;
 import java.util.List;
@@ -39,9 +40,9 @@ public class Usuario {
     @Column( name = "imagen_perfil")
     private byte[] imagenPerfil;
 
-//    @OneToMany( mappedBy = "idUsuario", cascade = CascadeType.ALL)
-//    private List<Publicacion> publicaciones;
-//
+    @OneToMany( mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Publicacion> publicaciones;
+
 //    @OneToMany( mappedBy = "etiquetado", cascade = CascadeType.ALL)
 //    private List<Etiqueta> etiquetas;
 //
