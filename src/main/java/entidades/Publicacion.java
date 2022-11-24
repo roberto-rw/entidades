@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Objects;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
@@ -36,8 +37,8 @@ public class Publicacion {
     @Column( name = "imagen", length=1000000)
     private byte[] imagen;
 
-//    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
-//    private List<Comentario> comentarios;
+    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Comentario> comentarios;
 //
 //    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
 //    private List<Etiqueta> etiquetas;
@@ -102,14 +103,14 @@ public class Publicacion {
         this.imagen = imagen;
     }
 
-//    public List<Comentario> getComentarios() {
-//        return comentarios;
-//    }
-//
-//    public void setComentarios(List<Comentario> comentarios) {
-//        this.comentarios = comentarios;
-//    }
-//
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
+    }
+
 //    public List<Etiqueta> getEtiquetas() {
 //        return etiquetas;
 //    }

@@ -10,6 +10,11 @@ public class PeticionComentario extends AbstractPeticion {
     public PeticionComentario() {
     }
 
+    public PeticionComentario(String peticion, String peticionRespuesta, Integer hashcodeSC, String respuesta, Comentario comentario) {
+        super(peticion, peticionRespuesta, hashcodeSC, respuesta);
+        this.comentario = comentario;
+    }
+
     public PeticionComentario(String peticion, Integer hashcodeSC, String respuesta, Comentario comentario) {
         super(peticion, hashcodeSC, respuesta);
         this.comentario = comentario;

@@ -33,6 +33,14 @@ public class Comentario {
 
     public Comentario(){}
 
+    public Comentario(Calendar fecha, String texto, Usuario usuario, Publicacion publicacion) {
+        this.fecha = fecha;
+        this.texto = texto;
+        this.imagen = imagen;
+        this.usuario = usuario;
+        this.publicacion = publicacion;
+    }
+
     public Long getId() {
         return id;
     }
