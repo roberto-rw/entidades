@@ -17,19 +17,22 @@ public class Hashtag {
     @Column(name = "nombre")
     private String nombre;
 
-    @OneToMany(mappedBy = "hashtag", cascade = CascadeType.ALL)
-    private List<HashtagPublicacion> hashtagPublicaciones;
-
+    @ManyToOne (fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_publicacion")
+    private Publicacion publicacion;
+    
     public Hashtag() {}
 
     public Hashtag(String nombre) {
         this.nombre = nombre;
     }
 
-    public Hashtag(String nombre, List<HashtagPublicacion> hashtagPublicaciones) {
+    public Hashtag(String nombre, Publicacion publicacion) {
         this.nombre = nombre;
-        this.hashtagPublicaciones = hashtagPublicaciones;
+        this.publicacion = publicacion;
     }
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -39,18 +42,18 @@ public class Hashtag {
         this.nombre = nombre;
     }
 
-    public List<HashtagPublicacion> getHashtagPublicaciones() {
-        return hashtagPublicaciones;
-    }
-
-    public void setHashtagPublicaciones(List<HashtagPublicacion> hashtagPublicaciones) {
-        this.hashtagPublicaciones = hashtagPublicaciones;
-    }
-
     public Long getId() {
         return id;
     }
 
+    public Publicacion getPublicacion() {
+        return publicacion;
+    }
+
+    public void setPublicacion(Publicacion publicacion) {
+        this.publicacion = publicacion;
+    }
+ 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

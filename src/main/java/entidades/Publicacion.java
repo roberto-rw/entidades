@@ -43,11 +43,15 @@ public class Publicacion {
 //    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
 //    private List<Etiqueta> etiquetas;
 //
-//    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.ALL)
-//    private List<HashtagPublicacion> hashtagPublicaciones;
+    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    private List<Hashtag> hashtag;
 
     public Publicacion() {}
 
+    public Publicacion(Long id) {
+        this.id = id;
+    }
+    
     public Publicacion(Usuario usuario, Calendar fecha, String texto, byte[] imagen) {
         this.usuario = usuario;
         this.fecha = fecha;
@@ -111,6 +115,16 @@ public class Publicacion {
         this.comentarios = comentarios;
     }
 
+    public List<Hashtag> getHashtag() {
+        return hashtag;
+    }
+
+    public void setHashtag(List<Hashtag> hashtag) {
+        this.hashtag = hashtag;
+    }
+
+    
+    
 //    public List<Etiqueta> getEtiquetas() {
 //        return etiquetas;
 //    }
@@ -139,6 +153,5 @@ public class Publicacion {
     public int hashCode() {
         return Objects.hash(id);
     }
-
 
 }
