@@ -1,5 +1,4 @@
 entidades\Sexo.class
-entidades\HashtagPublicacion.class
 peticiones\PeticionNotificacion.class
 peticiones\PeticionPublicacion.class
 pruebas\pruebas.class
