@@ -19,6 +19,9 @@ public class Usuario {
 
     @Column( name = "usuario")
     private String usuario;
+    
+    @Column( name = "token")
+    private String token;
 
     @Column( name = "password")
     private String password;
@@ -70,7 +73,12 @@ public class Usuario {
         this.password = password;
     }
     
-    
+    public Usuario(String token, String correo, String usuario){
+        this.correo = correo;
+        this.usuario = usuario;
+        this.token = token;
+        this.fechaNacimiento = fechaNacimiento;
+    }
 
     public String getUsuario() {
         return usuario;
@@ -126,6 +134,14 @@ public class Usuario {
 
     public void setImagenPerfil(byte[] imagenPerfil) {
         this.imagenPerfil = imagenPerfil;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
 //    public List<Publicacion> getPublicaciones() {

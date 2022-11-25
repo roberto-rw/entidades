@@ -6,6 +6,7 @@ public class Peticiones {
     public static String ACTUALIZAR_USUARIO = "102";
     public static String ELIMINAR_USUARIO = "103";
     public static String CONSULTAR_USUARIO = "104";
+    public static String INICIAR_SESION_FB = "105";
 
     public static String REGISTRAR_PUBLICACION = "200";
     public static String ACTUALIZAR_PUBLICACION= "201";
