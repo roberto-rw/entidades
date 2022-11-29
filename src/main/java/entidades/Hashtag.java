@@ -16,7 +16,7 @@ public class Hashtag {
     @Column(name = "nombre")
     private String nombre;
 
-    @ManyToOne (fetch = FetchType.LAZY)
+    @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn(name = "id_publicacion")
     private Publicacion publicacion;
     

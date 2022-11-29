@@ -1,5 +1,7 @@
 package peticiones;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import entidades.Hashtag;
 import entidades.Publicacion;
 import java.util.List;
@@ -56,7 +58,4 @@ public class PeticionPublicaciones extends AbstractPeticion {
     public void setHashtag(Hashtag hashtag) {
         this.hashtag = hashtag;
     }
-    
-    
-
 }
