@@ -19,7 +19,7 @@ public class Etiqueta {
     private Publicacion publicacion;
 
     @ManyToOne (fetch = FetchType.EAGER)
-    @JoinColumn( name = "etiquetado")
+    @JoinColumn( name = "id_etiquetado")
     private Usuario etiquetado;
 
     public Etiqueta(){
