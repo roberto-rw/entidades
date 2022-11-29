@@ -39,10 +39,10 @@ public class Publicacion {
 
     @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Comentario> comentarios;
-//
-//    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
-//    private List<Etiqueta> etiquetas;
-//
+
+    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    private List<Etiqueta> etiquetas;
+
     @OneToMany(mappedBy = "publicacion", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private List<Hashtag> hashtag;
 
@@ -123,7 +123,13 @@ public class Publicacion {
         this.hashtag = hashtag;
     }
 
-    
+    public List<Etiqueta> getEtiquetas() {
+        return etiquetas;
+    }
+
+    public void setEtiquetas(List<Etiqueta> etiquetas) {
+        this.etiquetas = etiquetas;
+    }
     
 //    public List<Etiqueta> getEtiquetas() {
 //        return etiquetas;

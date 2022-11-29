@@ -1,17 +1,24 @@
 package peticiones;
 
+import entidades.Hashtag;
 import entidades.Publicacion;
 import java.util.List;
 
 public class PeticionPublicaciones extends AbstractPeticion {
 
     private List<Publicacion> publicaciones;
+    private Hashtag hashtag;
 
     public PeticionPublicaciones() {
     }
 
     public PeticionPublicaciones(String peticion) {
         super(peticion);
+    }
+    
+    public PeticionPublicaciones(String peticion, Hashtag hashtag) {
+        super(peticion);
+        this.hashtag = hashtag;
     }
 
     public PeticionPublicaciones(String peticion, String peticionRespuesta, Integer hashcodeSC, String respuesta, List<Publicacion> publicaciones) {
@@ -41,5 +48,15 @@ public class PeticionPublicaciones extends AbstractPeticion {
     public void setPublicaciones(List<Publicacion> publicaciones) {
         this.publicaciones = publicaciones;
     }
+
+    public Hashtag getHashtag() {
+        return hashtag;
+    }
+
+    public void setHashtag(Hashtag hashtag) {
+        this.hashtag = hashtag;
+    }
+    
+    
 
 }

@@ -1,19 +1,19 @@
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\peticiones\PeticionNotificacion.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\peticiones\PeticionPublicacion.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\peticiones\PeticionComentario.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\peticiones\AbstractPeticion.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\entidades\Sexo.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\helpers\Peticiones.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\entidades\Usuario.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\peticiones\PeticionUsuario.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\peticiones\PeticionPublicaciones.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\entidades\Hashtag.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\entidades\Etiqueta.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\pruebas\pruebas.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\entidades\Notificacion.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\peticiones\PeticionLog.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\pruebas\Pruebas2.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\entidades\Publicacion.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\entidades\BlackBoardObject.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\helpers\ConvertirPeticion.java
-D:\Cosas Escuela\Trabajos de clase\5to Semestre\Arquitectura de Software\ProyectoFinal\entidades\src\main\java\entidades\Comentario.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\peticiones\PeticionPublicacion.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\peticiones\AbstractPeticion.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\peticiones\PeticionUsuario.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\entidades\BlackBoardObject.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\entidades\Hashtag.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\entidades\Usuario.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\entidades\Sexo.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\peticiones\PeticionLog.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\entidades\Publicacion.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\entidades\Etiqueta.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\pruebas\Pruebas2.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\entidades\Notificacion.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\peticiones\PeticionComentario.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\helpers\ConvertirPeticion.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\helpers\Peticiones.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\peticiones\PeticionNotificacion.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\pruebas\pruebas.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\entidades\Comentario.java
+F:\Documents\GitHub\blackcock\entidades\src\main\java\peticiones\PeticionPublicaciones.java

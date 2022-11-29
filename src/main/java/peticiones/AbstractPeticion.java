@@ -31,8 +31,6 @@ public abstract class AbstractPeticion {
         this.peticion = peticion;
     }
     
-    
-    
     public AbstractPeticion() {
     }
 

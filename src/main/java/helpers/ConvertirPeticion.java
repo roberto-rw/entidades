@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 import peticiones.AbstractPeticion;
 import peticiones.PeticionComentario;
 import peticiones.PeticionNotificacion;
+import peticiones.PeticionNotificaciones;
 import peticiones.PeticionPublicacion;
 import peticiones.PeticionPublicaciones;
 import peticiones.PeticionUsuario;
@@ -28,10 +29,12 @@ public class ConvertirPeticion {
                 peticion = objectMapper.readValue(json, PeticionPublicacion.class);
             }else if(codigo.equals(AGREGAR_COMENTARIO) || codigo.equals(EDITAR_COMENTARIO) || codigo.equals(ELIMINAR_COMENTARIO)){
                 peticion = objectMapper.readValue(json, PeticionComentario.class);
-            }else if(codigo.equals(REGISTRAR_NOTIFICACION) || codigo.equals(ELIMINAR_NOTIFICACION)){
+            }else if(codigo.equals(NOTIFICACION_SMS) || codigo.equals(NOTIFICACION_CORREO) || codigo.equals(NOTIFICACION_TODOS)){
                 peticion = objectMapper.readValue(json, PeticionNotificacion.class);
             }else if(codigo.equals(CONSULTAR_PUBLICACIONES) || codigo.equals(CONSULTAR_PUBLICACIONES_HASHTAG)){
                 peticion = objectMapper.readValue(json, PeticionPublicaciones.class);
+            }else if(codigo.equals(CONSULTAR_NOTIFICACIONES)){
+                peticion = objectMapper.readValue(json, PeticionNotificaciones.class);
             }
             
             peticion.setHashcodeSC(hashcodeSC);
@@ -56,10 +59,12 @@ public class ConvertirPeticion {
                 peticion = objectMapper.readValue(json, PeticionPublicacion.class);
             }else if(codigo.equals(AGREGAR_COMENTARIO) || codigo.equals(EDITAR_COMENTARIO) || codigo.equals(ELIMINAR_COMENTARIO)){
                 peticion = objectMapper.readValue(json, PeticionComentario.class);
-            }else if(codigo.equals(REGISTRAR_NOTIFICACION) || codigo.equals(ELIMINAR_NOTIFICACION)){
+            }else if(codigo.equals(NOTIFICACION_SMS) || codigo.equals(NOTIFICACION_CORREO) || codigo.equals(NOTIFICACION_TODOS)){
                 peticion = objectMapper.readValue(json, PeticionNotificacion.class);
             }else if(codigo.equals(CONSULTAR_PUBLICACIONES) || codigo.equals(CONSULTAR_PUBLICACIONES_HASHTAG)){
                 peticion = objectMapper.readValue(json, PeticionPublicaciones.class);
+            }else if(codigo.equals(CONSULTAR_NOTIFICACIONES)){
+                peticion = objectMapper.readValue(json, PeticionNotificaciones.class);
             }
             //System.out.println(peticion);
             return peticion;
