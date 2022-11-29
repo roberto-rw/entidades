@@ -43,7 +43,7 @@ public class Publicacion {
 //    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
 //    private List<Etiqueta> etiquetas;
 //
-    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY, orphanRemoval = true)
+    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private List<Hashtag> hashtag;
 
     public Publicacion() {}
