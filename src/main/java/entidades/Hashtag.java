@@ -2,7 +2,6 @@ package entidades;
 
 import jakarta.persistence.*;
 
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -17,7 +16,7 @@ public class Hashtag {
     @Column(name = "nombre")
     private String nombre;
 
-    @ManyToOne (fetch = FetchType.EAGER)
+    @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "id_publicacion")
     private Publicacion publicacion;
     

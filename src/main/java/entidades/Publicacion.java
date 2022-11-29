@@ -11,8 +11,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+        generator = ObjectIdGenerators.IntSequenceGenerator.class,
+        property = "@id", scope = Publicacion.class)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table(name = "publicaciones")
@@ -43,7 +43,7 @@ public class Publicacion {
 //    @OneToMany( mappedBy = "publicacion", cascade = CascadeType.ALL)
 //    private List<Etiqueta> etiquetas;
 //
-    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "publicacion", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Hashtag> hashtag;
 
     public Publicacion() {}
