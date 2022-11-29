@@ -18,9 +18,11 @@ public class Peticiones {
     public static String EDITAR_COMENTARIO = "301";
     public static String ELIMINAR_COMENTARIO = "302";
 
-    public static String REGISTRAR_NOTIFICACION = "400";
-    public static String ELIMINAR_NOTIFICACION = "401";
-
+    public static String NOTIFICACION_CORREO = "400";
+    public static String NOTIFICACION_SMS = "401";
+    public static String NOTIFICACION_TODOS = "402";
+    public static String CONSULTAR_NOTIFICACIONES = "403";
+    
     public static String LOGGEAR_INFO = "500";
     public static String LOGGEAR_ERROR = "501";
     public static String LOGGEAR_ADVERTENCIA = "502";

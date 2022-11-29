@@ -51,6 +51,12 @@ public class Usuario {
 //
 //    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 //    private List<Comentario> comentarios;
+    
+    @OneToMany(mappedBy = "remitente", cascade = CascadeType.ALL)
+    private List<Notificacion> notificacionesRemitente;
+    
+    @OneToMany(mappedBy = "destinatario", cascade = CascadeType.ALL)
+    private List<Notificacion> notificacionesDestinatario;
 
     public Usuario(){}
 

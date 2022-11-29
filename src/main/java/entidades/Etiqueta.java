@@ -14,17 +14,23 @@ public class Etiqueta {
     @Column( name = "id_etiqueta")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn( name = "id_publicacion")
     private Publicacion publicacion;
 
-    @ManyToOne
-    @JoinColumn( name = "etiquetado")
+    @ManyToOne (fetch = FetchType.EAGER)
+    @JoinColumn( name = "id_etiquetado")
     private Usuario etiquetado;
 
-    private Etiqueta(){}
+    public Etiqueta(){
+    }
+    
     public Etiqueta(Publicacion publicacion, Usuario etiquetado) {
         this.publicacion = publicacion;
+        this.etiquetado = etiquetado;
+    }
+
+    public Etiqueta(Usuario etiquetado) {
         this.etiquetado = etiquetado;
     }
 
