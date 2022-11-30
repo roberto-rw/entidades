@@ -7,6 +7,7 @@ public class PeticionUsuario extends AbstractPeticion {
     private Usuario usuario;
 
     public PeticionUsuario() {
+        
     }
 
     public PeticionUsuario(String peticion, String peticionRespuesta, Integer hashcodeSC, String respuesta, Usuario usuario) {
