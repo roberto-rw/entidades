@@ -49,8 +49,8 @@ public class Usuario {
 //    @OneToMany( mappedBy = "etiquetado", cascade = CascadeType.ALL)
 //    private List<Etiqueta> etiquetas;
 //
-//    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-//    private List<Comentario> comentarios;
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Comentario> comentarios;
     
     @OneToMany(mappedBy = "remitente", cascade = CascadeType.ALL)
     private List<Notificacion> notificacionesRemitente;

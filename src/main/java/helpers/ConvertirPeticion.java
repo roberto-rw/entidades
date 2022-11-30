@@ -23,7 +23,7 @@ public class ConvertirPeticion {
             String codigo = jsonNode.get("peticion").asText();
             AbstractPeticion peticion = null;// = objectMapper.readValue(json, BlackBoardObject.class);
             
-            if(codigo.equals(REGISTRAR_USUARIO) || codigo.equals(INICIAR_SESION) || codigo.equals(ACTUALIZAR_USUARIO) || codigo.equals(ELIMINAR_USUARIO) || codigo.equals(INICIAR_SESION_FB)){
+            if(codigo.equals(REGISTRAR_USUARIO) || codigo.equals(INICIAR_SESION) || codigo.equals(ACTUALIZAR_USUARIO) || codigo.equals(ELIMINAR_USUARIO) || codigo.equals(INICIAR_SESION_FB)|| codigo.equals(CERRAR_SESION)){
                 peticion = objectMapper.readValue(json, PeticionUsuario.class);
             }else if(codigo.equals(REGISTRAR_PUBLICACION) || codigo.equals(ACTUALIZAR_PUBLICACION) || codigo.equals(ELIMINAR_PUBLICACION) ){
                 peticion = objectMapper.readValue(json, PeticionPublicacion.class);
@@ -53,7 +53,7 @@ public class ConvertirPeticion {
             String codigo = jsonNode.get("peticionRespuesta").asText();
             AbstractPeticion peticion = null;// = objectMapper.readValue(json, BlackBoardObject.class);
             
-            if(codigo.equals(REGISTRAR_USUARIO) || codigo.equals(INICIAR_SESION) || codigo.equals(ACTUALIZAR_USUARIO) || codigo.equals(ELIMINAR_USUARIO) || codigo.equals(NOTIFICAR_CLIENTE) || codigo.equals(INICIAR_SESION_FB)){
+            if(codigo.equals(REGISTRAR_USUARIO) || codigo.equals(INICIAR_SESION) || codigo.equals(ACTUALIZAR_USUARIO) || codigo.equals(ELIMINAR_USUARIO) || codigo.equals(NOTIFICAR_CLIENTE) || codigo.equals(INICIAR_SESION_FB)|| codigo.equals(CERRAR_SESION)){
                 peticion = objectMapper.readValue(json, PeticionUsuario.class);
             }else if(codigo.equals(REGISTRAR_PUBLICACION) || codigo.equals(ACTUALIZAR_PUBLICACION) || codigo.equals(ELIMINAR_PUBLICACION)){
                 peticion = objectMapper.readValue(json, PeticionPublicacion.class);

@@ -25,9 +25,6 @@ public class Notificacion {
     public Notificacion() {
     }
 
-//    public Notificacion() {
-//    }
-    
     public Notificacion(Usuario remitente, Usuario destinatario, String mensaje) {
         this.remitente = remitente;
         this.destinatario = destinatario;
