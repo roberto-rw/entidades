@@ -15,5 +15,6 @@ entidades\Etiqueta.class
 helpers\Peticiones.class
 entidades\Notificacion.class
 entidades\Usuario.class
+peticiones\PeticionNotificaciones.class
 entidades\Hashtag.class
 peticiones\PeticionUsuario.class
