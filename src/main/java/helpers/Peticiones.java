@@ -8,7 +8,6 @@ public class Peticiones {
     public static String CONSULTAR_USUARIO = "104";
     public static String INICIAR_SESION_FB = "105";
     public static String CERRAR_SESION = "106";
-    public static String CERRAR_APP = "107";
 
     public static String REGISTRAR_PUBLICACION = "200";
     public static String ACTUALIZAR_PUBLICACION= "201";
